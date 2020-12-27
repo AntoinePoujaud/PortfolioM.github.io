@@ -1,0 +1,449 @@
+@font-face {
+	font-family: myFont;
+	src: url(../font/msyi.ttf);
+}
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	background-color: #232323;
+}
+
+/* Empêcher le scroll de la page */
+.no-scroll {
+	height: 100%;
+	overflow: hidden;
+}
+
+/* Utile pour clear les float et reprendre le flow de la page */
+.clear {
+	clear: both;
+}
+
+#network-nav-container {
+	display: flex;
+}
+
+.header {
+	width: 100%;
+	margin-top: 2%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+/* Gestion des liens vers réseaux sociaux */
+.social-network-element {
+	width: 8%;
+}
+
+.social-network-element img {
+	margin-right: 10%;
+	width: 35px;
+}
+
+
+/* Gestion du menu de navigation */
+#main-menu {
+	text-align: right;
+}
+
+#index-nav {
+	padding-left: 0;
+	text-decoration: none;
+}
+
+#gallery-nav {
+	padding-left: 0;
+}
+
+#contact-nav {
+	padding-right: 0;
+	margin-right: 0;
+}
+
+.main-menu-element {
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #f7f2f1;
+	font-size: 200%;
+	font-family: myFont;
+	border-bottom: solid white 1px;
+	text-decoration: none;
+}
+
+/* Gestion du gros titre */
+#main-title {
+	position: relative;
+	width: 100%;
+	margin: auto;
+	margin-bottom: 3%;
+}
+
+#main-title-text {
+	margin: 0 auto;
+	text-align: center;
+	font-family: myFont;
+	font-size: 350%;
+}
+
+#main-subtitle-text {
+	text-align: center;
+	margin: 0;
+	font-size: 250%;
+	font-family: myFont;
+}
+
+.main-title-element {
+	color: #f7f2f1;
+}
+
+.main-title-element a {
+	color: #f7f2f1;
+	text-decoration: none;
+}
+
+#main-content {
+	width: 100%;
+	margin-top: 4%;
+}
+
+/* A PARTIR DE LA, CA CONCERNE LES 3 IMAGES PRINCIPALES QUAND ON ARRIVE SUR LE SITE*/
+
+	.main-images {
+		transition: .5s ease-in-out;
+		display: block;
+		float: left;
+		position: relative;
+		width: 30%;
+		padding-bottom: 25%;
+		transform-origin: 0 100%;
+		/* Incline la div */
+		transform: skew(-20deg);
+		-webkit-transform:skew(-20deg);
+		-moz-transform:skew(-20deg);
+		-o-transform:skew(-20deg);
+		
+		
+	}
+
+
+	.main-images:before {
+		transition: .5s ease-in-out;
+		content: '';
+		position: absolute;
+		background-size: cover;
+		transform-origin: inherit;
+		/* Incline l'image dans la div */
+		transform: skew(20deg);
+		-webkit-transform:skew(20deg);
+		-moz-transform:skew(20deg);
+		-o-transform:skew(20deg);
+	}
+
+	.main-images:hover {
+		transition: .5s ease-in-out;
+		z-index: 2;
+	}
+
+
+	/* GESTION DE L'IMAGE DE GAUCHE */
+
+	#first-main-image {
+		width: 30%;
+		height: 40%;
+		margin-left: 1.5%;
+		clip-path: polygon(0% 0%, 30.5% 100%, 0% 100%, 100% 100%, 100% 0%);
+		z-index: 1;
+	}
+
+	#first-main-image:before {
+		width: 200%; 
+		height: 140%;
+		top: 0%;
+		left: -20%;
+		background-image: url('../img/shazam.jpg');
+	}
+
+	#first-main-image:hover {
+		/* clip-path: polygon(0% 0%, 33% 110%, 0% 110%, 110% 110%, 110% 0%); */
+	}
+
+	#first-main-image:hover::before {
+		width: 225%; 
+		height: 165%;
+		top: 0%;
+		left: -30%;	
+	}
+
+	/* GESTION DE L'IMAGE CENTRALE */
+
+	#second-main-image { 
+		overflow: hidden;
+	}
+
+	#second-main-image:before {
+		width: 210%; 
+		height: 170%;
+		top: -35%;
+		left: -50%;
+		background-image: url('../img/tlou.jpg');
+	}
+
+	#second-main-image:hover {
+		height: 200%;
+		transform: skew(-20deg);
+		-webkit-transform:skew(-20deg);
+		-moz-transform:skew(-20deg);
+		-o-transform:skew(-20deg);	
+	}
+
+	#second-main-image:hover::before {
+		transform: skew(20deg);
+		-webkit-transform:skew(20deg);
+		-moz-transform:skew(20deg);
+		-o-transform:skew(20deg);
+		width: 230%; 
+		height: 190%;
+		top: -35%;
+		left: -60%;
+	}
+
+	/* GESTION DE L'IMAGE DE DROITE */
+
+	#third-main-image {
+		width: 38%;
+		height: 40%;
+		clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+	}
+
+	#third-main-image:before {
+		background-image: url('../img/dude.jpg');
+		/* Taille de l'image */
+		width: 80%; 
+		height: 200%;
+		/* Position de l'image */
+		top: 0%;
+		left: 20%;
+	}
+
+	#third-main-image:hover {
+		width: 35.5%;
+		height: 40%;
+		/* clip-path: polygon(-5% -5%, -5% 110%, 110% 110%, 110% 0%); */
+	}
+
+	#third-main-image:hover::before {
+		width: 90%; 
+		height: 210%;
+		top: 0%;
+		left: 20%;
+	}
+
+/* FIN DE LA GESTION DES 3 IMAGES PRINCIPALES*/
+
+
+
+#down-arrow {
+	width: 10%;
+	margin-left: 45%;
+	margin-right: 45%;
+	text-align: center;
+}
+
+#down-arrow a img {
+	width: 50%;
+}
+
+/* Gestion du footer */
+#footer-container {
+	display: flex;
+	position: fixed;
+	bottom: 0;
+	background-color: #1a1a1a;
+	width: 100%;
+}
+
+.footer {
+	width: 50%;
+	height: 50px;
+	margin-bottom: 1%;
+}
+
+.footer-network-element {
+	margin-left: 60px;
+}
+
+.footer-network-element img {
+	margin-top: 21px;
+	width: 20px;
+}
+
+#footer-mail {
+
+}
+
+#footer-mail p {
+	margin-top: 16px;
+	margin-right: 2%;
+	margin-bottom: 0;
+	color: #f7f2f1;
+	font-size: 150%;
+	font-family: myFont;
+	text-align: right;
+}
+
+
+
+/* TEST GRID AND FLEX */
+
+#gallery-main-content{
+	margin-top: 3%;
+	margin-left: 0%;
+	margin-right: 0%;
+	margin-bottom: 10%;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-auto-rows: 300px;
+	grid-column-gap: .45%;
+	grid-row-gap: .6%;
+}
+
+.gallery-item {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.gallery-item .image {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.gallery-item .image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 50% 50%;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+
+.gallery-item:hover .image img{
+	transform: scale(1.5);
+}
+
+/* Différentes longueurs des images */
+.w-1 {
+	grid-column: span 1;
+}
+
+.w-2 {
+	grid-column: span 2;
+}
+
+.w-3 {
+	grid-column: span 3;
+}
+
+.w-4 {
+	grid-column: span 4;
+}
+
+.w-5 {
+	grid-column: span 5;
+}
+
+.w-6 {
+	grid-column: span 6;
+}
+
+/* Différentes hauteurs des images */
+.h-1 {
+	grid-row: span 1;
+}
+
+.h-2 {
+	grid-row: span 2;
+}
+
+.h-3 {
+	grid-row: span 3;
+}
+
+.h-4 {
+	grid-row: span 4;
+}
+
+.h-5 {
+	grid-row: span 5;
+}
+
+.h-6 {
+	grid-row: span 6;
+}
+  
+
+ /* Page de contact */
+
+#contact-form {
+	width: 75%;
+	height: 150px;
+	margin: 0 auto;
+	color: white;
+}
+
+#contact-form p {
+	margin: 0;
+	width: 90%;
+	color: grey;
+	font-style: italic;
+	align-content: flex-start;
+}
+
+.little-form-input {
+	width: 40%;
+	height: 13%;
+	min-width: 250px;
+}
+
+#contact-form label {
+	font-size: 125%;
+}
+
+#contact-form label span {
+	font-size: 75%;
+	color: grey;
+	font-style: italic;
+}
+
+#contact-form fieldset {
+	border: none;
+}
+
+#contact-form fieldset textarea {
+	height: 125%;
+	width: 100%;
+	margin-bottom: 5px;
+	resize: none;
+}
+
+#footer-form {
+	margin-top: 5px;
+}
+
+#submit-div {
+	margin-top: 10px;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+#submit-form {
+	width: 75px;
+}
+
+

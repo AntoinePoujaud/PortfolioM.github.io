@@ -1,0 +1,215 @@
+body {
+	margin: 0 auto;
+	padding: 0;
+	background-color: #232323;
+}
+
+/* Utile pour clear les float et reprendre le flow de la page */
+.clear {
+	clear: both;
+}
+
+/* Gestion des liens vers réseaux sociaux */
+#social-network {
+	position: relative;
+	width: 50%;
+	float: left;
+	margin-top: 2%;
+}
+
+.social-network-element {
+	padding-right: 10%;
+}
+
+
+/* Gestion du menu de navigation */
+#main-menu {
+	width: 49%;
+	position: relative;
+	float: right;
+	margin-top: 2%;
+	margin-right: 1%;
+	text-align: right;
+}
+
+#index-nav {
+	padding-left: 0;
+	text-decoration: none;
+}
+
+#gallery-nav {
+	padding-left: 0;
+}
+
+#contact-nav {
+	padding-right: 0;
+	margin-right: 0;
+}
+
+.main-menu-element {
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #f7f2f1;
+	font-size: 120%;
+	border-bottom: solid white 3px;
+	text-decoration: none;
+}
+
+/* Gestion du gros titre */
+#main-title {
+	position: relative;
+	width: 100%;
+	margin: auto;
+	margin-top: 3%;
+}
+
+#main-title-text {
+	margin: 0 auto;
+	text-align: center;
+	text-decoration: none;
+}
+
+#main-subtitle-text {
+	text-align: center;
+	margin: 0;
+}
+
+.main-title-element {
+	color: #f7f2f1;
+}
+
+#main-content {
+	width: 100%;
+	margin-top: 3%;
+}
+
+/* A PARTIR DE LA, CA CONCERNE LES 3 IMAGES PRINCIPALES QUAND ON ARRIVE SUR LE SITE*/
+
+	.main-images {
+		display: block;
+		float: left;
+		position: relative;
+		width: 30%;
+		padding-bottom: 25%;
+		transform-origin: 0 100%;
+		transform: skewX(-20deg);
+		-webkit-transform:skew(-20deg);
+		-moz-transform:skew(-20deg);
+		-o-transform:skew(-20deg);
+		overflow: hidden;
+	}
+
+	.main-images:before {
+		content: '';
+		position: absolute;
+		background-size: cover;
+		transform-origin: inherit;
+		transform: skewX(20deg);
+		-webkit-transform:skew(20deg);
+		-moz-transform:skew(20deg);
+		-o-transform:skew(20deg);
+	}
+
+	/* GESTION DE L'IMAGE DE GAUCHE */
+
+	#first-main-image {
+		width: 28%;
+		margin-left: 2.5%;
+	}
+
+	#first-main-image:before {
+		width: 180%; 
+		height: 140%;
+		top: 0%;
+		left: -30%;
+		background-image: url('../img/shazam.jpg');
+	}
+
+	/* GESTION DE L'IMAGE CENTRALE */
+	#second-main-image {  }
+
+	#second-main-image:before {
+		width: 180%; 
+		height: 140%;
+		top: -20%;
+		left: -27%;
+		background-image: url('../img/tlou.jpg');
+	}
+
+	/* GESTION DE L'IMAGE DE DROITE */
+
+	#third-main-image {
+		width: 28%;
+	}
+
+	#third-main-image:before {
+		background-image: url('../img/dude.jpg');
+		/* Niveau de zoom de l'image */
+		width: 150%; 
+		height: 170%;
+
+		/* Position de l'image */
+		top: 0%;
+		left: 20%;
+		
+	}
+
+/* FIN DE LA GESTION DES 3 IMAGES PRINCIPALES*/
+
+
+
+#down-arrow {
+	width: 100%;
+}
+
+#down-arrow img {
+	display: block;
+	margin-left: 50%;
+	margin-right: 50%;
+	margin-top: 3%;
+	width: 5%;
+}
+
+/* Gestion du footer */
+#footer-mail {
+	width: 50%;
+	position: absolute;
+	right: 0;
+	bottom: 3%;
+	color: #f7f2f1;
+	font-size: 150%;
+}
+
+#footer-mail p {
+	position: fixed;
+	bottom: 0;
+	right: 5%;
+}
+
+/* TEST GRID AND FLEX */
+
+#gallery-main-content{
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+.wrapper {
+	width: 99.8%;
+	height: 100%;
+	border: green 1px solid;
+	display: grid;
+	grid-template-columns: repeat(4, 24.25%);
+	grid-template-rows: auto 1fr;
+	grid-gap: 1%;
+
+}
+
+.images-gallery{
+	grid-auto-flow: row;
+}
+
+.picture{
+	width: 99.8%;
+	height: auto;
+	border: yellow 1px solid;
+}
